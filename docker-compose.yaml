@@ -1,0 +1,13 @@
+services:
+  app:
+    image: ernesto05itsjr/ex_u3_agenda:latest
+    ports:
+      - "5005:5000"
+    environment:
+      - DATABASE_URL=postgresql://postgres:admin1234@db/cetech
+    networks:
+      - examen_ecb
+
+networks:
+  examen_ecb:
+    external: true
